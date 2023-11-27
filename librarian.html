@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librarian Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="lib.css">
+</head>
+
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <div class="librarian-box">
+            <h1>Welcome, Librarian!</h1>
+            <p>This is your dashboard where you can manage books.</p>
+
+            <!-- Search Bar -->
+            <div class="input-group mb-3">
+                <input type="text" id="searchTitle" class="form-control" placeholder="Search by Title">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" onclick="searchBooks()">Search</button>
+                </div>
+            </div>
+            <!-- Filter Dropdown -->
+            <div class="form-group mt-4">
+                <label for="availabilityFilter">Filter by Availability:</label>
+                <select id="availabilityFilter" class="form-control" onchange="applyFilter()">
+                    <option value="available">Available</option>
+                    <option value="borrowed">Borrowed</option>
+                    <option value="all" selected>All</option>
+                </select>
+            </div>                   
+            <!-- Book List -->
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    <h4 class="mb-0">Book List</h4>
+                </div>
+                <div class="card-body">
+                    <ul id="bookList" class="list-group">
+                        <!-- Book items will be dynamically added here -->
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Add Book Form -->
+            <div class="card mb-4">
+                <div class="card-header bg-info text-white">
+                    <h4 class="mb-0">Add Book</h4>
+                </div>
+                <div class="card-body">
+                    <form id="addBookForm">
+                        <div class="form-group">
+                            <label for="title">Title:</label>
+                            <input type="text" id="title" name="title" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="author">Author:</label>
+                            <input type="text" id="author" name="author" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="genre">Genre:</label>
+                            <select id="genre" name="genre" class="form-control" required>
+                                <option value="Horror">Horror</option>
+                                <option value="Comedy">Comedy</option>
+                                <option value="Romance">Romance</option>
+                                <option value="Thriller">Thriller</option>
+                                <option value="Crime">Crime</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description:</label>
+                            <textarea id="description" name="description" class="form-control" rows="3"></textarea>
+                        </div>
+                        <button type="button" class="btn btn-success" onclick="addBook()">Add Book</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Delete Book Form -->
+            <div class="card mt-4">
+                <div class="card-header bg-danger text-white">
+                    <h4 class="mb-0">Delete Book</h4>
+                </div>
+                <div class="card-body">
+                    <form id="deleteBookForm">
+                        <div class="form-group">
+                            <label for="deleteTitle">Title:</label>
+                            <input type="text" id="deleteTitle" name="deleteTitle" class="form-control" required>
+                        </div>
+                        <button type="button" class="btn btn-secondary" onclick="deleteBook()">Delete Book</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="librarian.js"></script>
+
+</body>
+
+</html>

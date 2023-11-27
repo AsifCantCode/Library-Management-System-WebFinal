@@ -1,0 +1,173 @@
+/* user.css */
+
+/* Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Container Styles */
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* User Box Styles */
+.user-box {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styles */
+.card form {
+    max-width: 400px;
+    margin: auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    color: #000;
+}
+
+/* Book List Styles */
+.list-group {
+    margin-top: 15px;
+}
+
+.list-group-item {
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+/* Card Header Styles */
+.card-header {
+    border-radius: 5px 5px 0 0;
+}
+
+/* Card Body Styles */
+.card-body {
+    border-radius: 0 0 5px 5px;
+}
+/* user.css */
+
+/* Style for book list items */
+.list-group-item:hover {
+    background-color: #f8f9fa; /* Light grey background on hover */
+    cursor: pointer; /* Show pointer cursor on hover */
+}
+
+.list-group-item:active {
+    background-color: #e9ecef; /* Slightly darker background on click */
+}
+/* Add this to your user.css file */
+
+/* Style for the borrowed books table */
+#borrowedBooksTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#borrowedBooksTable th,
+#borrowedBooksTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#borrowedBooksTable th {
+    background-color: #f2f2f2;
+}
+
+#borrowedBooksTable tr:hover {
+    background-color: #f5f5f5;
+}
+/* Add this to your CSS file or style block */
+#notification-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    text-align: center;
+    padding: 10px;
+}
+
+.notification-box {
+    background-color: #f8d7da; /* Adjust the color as needed */
+    border: 1px solid #721c24; /* Adjust the color as needed */
+    color: #721c24; /* Adjust the color as needed */
+    padding: 10px;
+    margin-bottom: 10px;
+}
+/* Custom CSS for the Popular Books Section */
+#popularBooks {
+    margin-top: 20px;
+}
+
+#popularBooks h2 {
+    margin-bottom: 10px;
+}
+
+.popular-books-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.popular-book-item {
+    background-color: #d9dee2;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 10px;
+}
+
+.popular-book-item:hover {
+    transform: scale(1.05);
+}
+
+.popular-book-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.popular-book-author {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.popular-book-count {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #007bff;
+}
+/* Add this CSS to your stylesheet */
+/* CSS for Popular Genre Tiles */
+#popularGenre {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius:20px;
+    align-items: center;
+    text-align: center;
+}
+
+#popularGenre h2{
+    font-weight: bold;
+}

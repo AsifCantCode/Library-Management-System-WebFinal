@@ -1,0 +1,114 @@
+<!-- user.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="user.css">
+</head>
+
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <div class="user-box">
+            <h1>Welcome, User!</h1>
+            <p>This is your dashboard where you can search for books and apply to borrow them.</p>
+            <!-- Notification div -->
+            <div id="notification" style="display: none;">
+                <p id="notificationText"></p>
+                <button onclick="showBookList()">View Books</button>
+            </div>
+            
+
+            <!-- Search Book Form -->
+            <div class="card mb-4">
+                <div class="card-header bg-info text-white">
+                    <h4 class="mb-0">Search Books</h4>
+                </div>
+                <div class="card-body">
+                    <form id="searchBookForm">
+                        <div class="form-group">
+                            <label for="search">Search:</label>
+                            <input type="text" id="search" name="search" class="form-control" required>
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="searchBooks()">Search Books</button>
+                    </form>
+                </div>
+            </div>
+            <div id="popularBooks"></div>
+            <div id="popularGenre" class="container">
+                <!-- Display the popular genre -->
+                <div class="popular-genre-tiles" id="popularGenreTiles"></div>
+            </div>
+            <!-- Book List -->
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    <h4 class="mb-0">Available Books</h4>
+                </div>
+                <div class="card-body">
+                    <ul id="bookList" class="list-group">
+                        <!-- Book items will be dynamically added here -->
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Borrowed Books Table -->
+                    <!-- Book List -->
+            <div class="card mt-4">
+                <div class="card-header bg-success text-white">
+                    <h4 class="mb-0">Borrowed Books</h4>
+                </div>
+                <div class="card-body">
+                    <table id="borrowedBooksTable">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Author</th>
+                                <th>Genre</th>
+                                <th>Borrowed Deadline</th>
+                                <th>Overdue Days</th>
+                                <th>Accumulated Fines</th>
+                                <th>Payment & Return</th>
+                            </tr>
+                        </thead>
+                        <tbody id="borrowedBooksList">
+                            <!-- Borrowed book items will be dynamically added here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Apply to Borrow Form -->
+            <div class="card mt-4">
+                <div class="card-header bg-warning text-white">
+                    <h4 class="mb-0">Apply to Borrow</h4>
+                </div>
+                <div class="card-body">
+                    <form id="applyBorrowForm">
+                        <div class="form-group">
+                            <label for="borrowTitle">Title:</label>
+                            <input type="text" id="borrowTitle" name="borrowTitle" class="form-control" required>
+                        </div>
+                        <button type="button" class="btn btn-warning" onclick="applyToBorrow()">Apply to Borrow</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="user.js"></script>
+
+</body>
+
+</html>
